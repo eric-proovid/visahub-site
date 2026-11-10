@@ -3,146 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VisaHub</title>
-<meta name="description" content="VisaHub is under construction. Your Visa, Your Journey, Our Expertise.">
-<meta property="og:title" content="VisaHub">
-<meta property="og:description" content="Your Visa, Your Journey, Our Expertise. VisaHub is under construction.">
+<title>VisaHub: the platform for agencies recruiting overseas workers</title>
+<meta name="description" content="VisaHub helps recruitment agencies in Cyprus turn applicants' documents from partner agencies abroad into an organised candidate database, track every case and present matched shortlists to employers.">
+<link rel="canonical" href="https://visahub.me/">
+<meta name="theme-color" content="#05060a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VisaHub">
+<meta property="og:title" content="VisaHub: from a pile of documents to a placed worker">
+<meta property="og:description" content="A platform for recruitment agencies that bring overseas workers to employers in Cyprus.">
 <meta property="og:url" content="https://visahub.me/">
-<meta name="theme-color" content="#7c45f5">
-<link rel="icon" type="image/png" href="assets/icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --purple: #7c45f5;
-    --pink: #c0679a;
-    --orange: #ff8a3d;
-    --green: #00f696;
-    --green-soft: #b9f7dd;
-    --ink: #13202b;
-    --white: #ffffff;
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    background: linear-gradient(90deg, var(--purple) 0%, var(--pink) 50%, var(--orange) 100%);
-    color: var(--white);
-    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-height: 100svh;
-  }
-  main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-  }
-  .copy { text-align: center; }
-  h1 {
-    font-weight: 700;
-    font-size: clamp(2.3rem, 4.4vw, 4.2rem);
-    line-height: 1.12;
-    margin: 0 0 1.4rem;
-  }
-  .pill {
-    display: inline-block;
-    background: var(--green);
-    color: var(--ink);
-    font-family: "Quicksand", "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: clamp(1rem, 1.9vw, 1.6rem);
-    padding: .55em 1.2em;
-    border-radius: 999px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.12);
-  }
-  .note {
-    font-weight: 600;
-    font-size: clamp(.9rem, 1.2vw, 1.05rem);
-    line-height: 1.5;
-    margin: 1.6rem 0 0;
-  }
-  .note a { color: var(--white); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  .logo {
-    display: block;
-    width: min(340px, 70%);
-    height: auto;
-    margin: 2rem auto 0;
-  }
-  .art {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .globe { position: relative; width: min(540px, 100%); aspect-ratio: 604 / 564; }
-  .globe img { position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .8s ease; }
-  .globe .day { opacity: 0; }
-  .globe.is-day .day { opacity: 1; }
-  .power {
-    position: absolute; left: 18.5%; top: 61%; width: 19%; aspect-ratio: 1;
-    border: 0; border-radius: 50%; background: transparent; cursor: pointer;
-  }
-  .power:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-  .stars span {
-    position: absolute;
-    color: #ffd75e;
-    font-size: 14px;
-    animation: twinkle 3s ease-in-out infinite;
-  }
-  @keyframes twinkle { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
-  footer { height: 34px; display: flex; flex-direction: column; }
-  footer .bar { flex: 3; background: var(--green); }
-  footer .soft { flex: 1; background: var(--green-soft); }
-  @media (max-width: 820px) {
-    main { grid-template-columns: 1fr; padding: 2rem 1rem; gap: .5rem; }
-    .art { order: -1; }
-    .globe { width: min(340px, 86%); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .stars span { animation: none; opacity: .8; }
-  }
-</style>
+<meta property="og:image" content="https://visahub.me/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VisaHub: from a pile of documents to a placed worker">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VisaHub: from a pile of documents to a placed worker">
+<meta name="twitter:description" content="A platform for recruitment agencies that bring overseas workers to employers in Cyprus.">
+<meta name="twitter:image" content="https://visahub.me/assets/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<main>
-  <section class="copy">
-    <h1>Thanks for<br>visiting VisaHub</h1>
-    <span class="pill">Your Visa, Your Journey, Our Expertise</span>
-    <p class="note">VisaHub is under construction to serve you better.<br>
-      Stay tuned for a seamless visa experience!</p>
-    <p class="note">For inquiries, contact us at <a href="mailto:info@visahub.me">info@visahub.me</a></p>
-    <img class="logo" src="assets/logo.png" width="700" height="175" alt="visa hub">
-  </section>
-  <section class="art">
-    <div class="stars" aria-hidden="true">
-      <span style="left:4%;top:8%">★</span><span style="left:94%;top:30%;animation-delay:1.2s">★</span>
-      <span style="left:2%;top:62%;animation-delay:1.8s">★</span><span style="left:90%;top:90%;animation-delay:.9s">★</span>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="VisaHub home"><img src="/assets/logo.png" width="700" height="175" alt="VisaHub"></a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#who">Who it's for</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#status">Status</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">From a pile of documents to a <span class="grad-text">placed worker.</span></h1>
+      <p class="lead">VisaHub is a platform for recruitment agencies that bring overseas workers to employers in Cyprus. It reads applicants' documents, organises every candidate in one place and follows each case to placement.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:info@visahub.me?subject=VisaHub%20demo%20request">Request a demo</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
+      <p class="status-line"><span>Private beta in preparation</span><span>Starting in Cyprus</span></p>
     </div>
-    <div class="globe">
-      <img class="night" src="assets/globe-night.png" width="604" height="564" alt="">
-      <img class="day" src="assets/globe-day.png" width="604" height="564" alt="">
-      <button class="power" type="button" aria-label="Switch day and night"></button>
+    <div class="art">
+      <div class="globe">
+        <img class="night" src="/assets/globe-night.png" width="604" height="564" alt="Illustration: a house, an office building and trees standing on top of a globe.">
+        <img class="day" src="/assets/globe-day.png" width="604" height="564" alt="">
+        <button class="power" type="button" aria-pressed="false" aria-label="Switch the illustration between night and day"></button>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="section" id="problem" aria-labelledby="problem-title">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2 id="problem-title">Recruiting from abroad runs on paperwork.</h2>
+    <p class="intro">Every applicant arrives as a bundle of scans: passport, certificates, medical and police papers, references. They come by email and messaging apps from partner agencies in several countries, in different formats and at different times.</p>
+    <ul class="pain">
+      <li>Staff retype the same details into spreadsheets and forms.</li>
+      <li>It's hard to see which papers are missing or about to expire.</li>
+      <li>Each case lives in someone's inbox, so nobody sees the whole pipeline.</li>
+      <li>Building a shortlist for an employer means searching it all again.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section mist" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 id="how-title">Four steps, one place.</h2>
+    <ol class="grid four steps">
+      <li class="card">
+        <h3>Receive</h3>
+        <p>Partner agencies abroad send each applicant's documents. We start with the Philippines and India.</p>
+      </li>
+      <li class="card">
+        <h3>Read and organise</h3>
+        <p>AI reads the documents, sorts them by person and fills in the candidate's record. It flags anything that needs a human check, and your staff confirm before anything is saved.</p>
+      </li>
+      <li class="card">
+        <h3>Track</h3>
+        <p>Every candidate sits on one board, from application to placement. Your team moves each case forward. VisaHub flags what needs attention and never moves a case by itself.</p>
+      </li>
+      <li class="card">
+        <h3>Match and present</h3>
+        <p>Compare candidates with an employer's requirements and present a matched shortlist.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <p class="eyebrow">Who it's for</p>
+    <h2 id="who-title">Built for agencies. Better for everyone in the chain.</h2>
+    <ul class="grid three">
+      <li class="card">
+        <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#9e31ff"/><path d="M12 31V17l10-6 10 6v14h-7v-8h-6v8z" fill="#fff"/></svg>
+        <h3>Recruitment agencies</h3>
+        <p>One organised candidate database and one view of every case, instead of inboxes and spreadsheets.</p>
+      </li>
+      <li class="card">
+        <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#44c7f2"/><path d="M12 14h20v4H12zm0 6h20v4H12zm0 6h13v4H12z" fill="#05060a"/></svg>
+        <h3>Employers</h3>
+        <p>Households, hotels and restaurants receive clear shortlists of candidates matched to what they asked for, through their agency.</p>
+      </li>
+      <li class="card">
+        <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#00f696"/><circle cx="22" cy="17" r="5" fill="#05060a"/><path d="M12 33c0-6 4.5-9 10-9s10 3 10 9z" fill="#05060a"/></svg>
+        <h3>Workers</h3>
+        <p>Their documents are handled once, with care, by agencies that can see exactly where each application stands.</p>
+      </li>
+    </ul>
+    <p class="note">We start with domestic workers and hospitality staff.</p>
+  </div>
+</section>
+
+<section class="section dark" id="security" aria-labelledby="security-title">
+  <div class="wrap">
+    <p class="eyebrow">Why VisaHub</p>
+    <h2 id="security-title">Built for sensitive documents.</h2>
+    <p class="intro">Passports and personal papers deserve careful handling. These are the choices we've made so far.</p>
+    <ul class="grid two">
+      <li class="card">
+        <h3>Hosted in the EU</h3>
+        <p>Our servers run in an AWS data centre region in the European Union (Stockholm).</p>
+      </li>
+      <li class="card">
+        <h3>Encrypted</h3>
+        <p>Data is encrypted in transit (HTTPS) and at rest, with an encryption key we manage.</p>
+      </li>
+      <li class="card">
+        <h3>Closed by default</h3>
+        <p>No public sign-up. The beta is built for invitation-only accounts with two-step sign-in and role-based access.</p>
+      </li>
+      <li class="card">
+        <h3>People decide</h3>
+        <p>AI prepares and flags. Agency staff check and decide.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="status" aria-labelledby="status-title">
+  <div class="wrap">
+    <p class="eyebrow">Status</p>
+    <h2 id="status-title">Where we are.</h2>
+    <ol class="timeline">
+      <li class="now"><span class="when">Now</span><p>A working proof of concept, tested with a partner recruitment agency in Cyprus.</p></li>
+      <li><span class="when">Next</span><p>A private beta with that agency, on real cases.</p></li>
+      <li><span class="when">Then</span><p>More agencies in Cyprus, and more routes and sectors.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section dark vision" id="vision" aria-labelledby="vision-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Where we're going</p>
+      <h2 id="vision-title">A hub for moving abroad.</h2>
+      <span class="tag">Our direction, not a live product</span>
+      <p>VisaHub began in 2024 with a wider idea: one place that helps people move abroad for work, study, investment or retirement, and connects them with vetted professionals.</p>
+      <p>We're starting where the need is most concrete, with the agencies that already do this work every day.</p>
+    </div>
+    <ul class="pills" aria-label="Reasons people move abroad">
+      <li>Work</li>
+      <li>Study</li>
+      <li>Investment</li>
+      <li>Retirement</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section dark contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 id="contact-title">Talk to us.</h2>
+    <p class="intro">Run a recruitment agency, or want to know more? Write to us and one of the founders will reply.</p>
+    <p><a class="mail" href="mailto:info@visahub.me">info@visahub.me</a></p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="mailto:info@visahub.me?subject=VisaHub%20demo%20request">Request a demo</a>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer><div class="bar"></div><div class="soft"></div></footer>
-<script>
-  (function () {
-    var g = document.querySelector('.globe');
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var timer = null;
-    function flip() { g.classList.toggle('is-day'); }
-    function start() { if (!reduce) timer = setInterval(flip, 4000); }
-    g.querySelector('.power').addEventListener('click', function () { clearInterval(timer); flip(); start(); });
-    start();
-  })();
-</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <img src="/assets/logo.png" width="700" height="175" alt="VisaHub">
+      <address>
+        <strong>M.Y. VISAHUB LTD</strong><br>
+        Registered in Cyprus, no. HE 464870<br>
+        Registered office: Kyriakou Matsi 18, Victory Tower, 1st floor, 1082 Nicosia, Cyprus<br>
+        <a href="mailto:info@visahub.me">info@visahub.me</a>
+      </address>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="copy">© 2026 M.Y. VISAHUB LTD. All rights reserved.</p>
+  </div>
+  <div class="bar"></div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
